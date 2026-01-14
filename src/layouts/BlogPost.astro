@@ -8,26 +8,32 @@ const { frontmatter } = Astro.props;
   <div class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-white">
     <article class="max-w-3xl mx-auto">
       <div class="mb-8">
-        <a href="/blog" class="text-blue-600 hover:text-blue-800 font-medium mb-4 inline-block">&larr; Back to Blog</a>
+        <a href="/blog" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium mb-6">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+          </svg>
+          Back to Blog
+        </a>
         <div class="flex items-center gap-4 text-sm text-slate-500 mb-4">
+          <span class="bg-blue-50 text-blue-600 px-3 py-1 rounded-full font-medium">{frontmatter.category}</span>
           <time datetime={frontmatter.pubDate}>{new Date(frontmatter.pubDate).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
           <span>•</span>
           <span>{frontmatter.author}</span>
         </div>
         <h1 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-6">{frontmatter.title}</h1>
         {frontmatter.image && (
-            <img src={frontmatter.image} alt={frontmatter.title} class="w-full h-auto rounded-2xl shadow-lg mb-8" />
+          <img src={frontmatter.image} alt={frontmatter.title} class="w-full h-auto rounded-2xl shadow-lg mb-8" />
         )}
       </div>
       
-      <div class="prose prose-lg prose-slate max-w-none">
+      <div class="prose prose-lg prose-slate max-w-none prose-headings:font-bold prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-p:text-slate-600 prose-p:leading-relaxed prose-li:text-slate-600 prose-strong:text-slate-900 prose-a:text-blue-600 prose-a:no-underline hover:prose-a:underline">
         <slot />
       </div>
 
-      <div class="mt-12 pt-8 border-t border-slate-200">
-        <div class="bg-slate-50 rounded-2xl p-8 text-center">
+      <div class="mt-16 pt-8 border-t border-slate-200">
+        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 text-center">
           <h3 class="text-xl font-bold text-slate-900 mb-2">Need help with your WordPress site?</h3>
-          <p class="text-slate-600 mb-6">Let our US-based team handle the maintenance while you focus on content.</p>
+          <p class="text-slate-600 mb-6">Let our US-based team handle the maintenance while you focus on growing your business.</p>
           <a href="/#contact" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
             Get Started Today
           </a>
