@@ -295,7 +295,16 @@ const features = [
         </p>
       </div>
       
-      <form class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 p-8 md:p-10 border border-slate-200">
+      <form 
+        id="contact-form"
+        action="https://api.web3forms.com/submit" 
+        method="POST"
+        class="bg-white rounded-2xl shadow-xl shadow-slate-200/50 p-8 md:p-10 border border-slate-200"
+      >
+        <!-- Replace YOUR_ACCESS_KEY with your Web3Forms access key from https://web3forms.com -->
+        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New WP Care Inquiry" />
+        <input type="hidden" name="from_name" value="WP Care Website" />
         <div class="grid md:grid-cols-2 gap-6">
           <div>
             <label for="name" class="block text-sm font-medium text-slate-700 mb-2">Full Name *</label>
@@ -456,8 +465,61 @@ business-site.net"
           We respect your privacy. Your information will never be shared.
         </p>
       </form>
+
+      <!-- Success Message (hidden by default) -->
+      <div id="success-message" class="hidden bg-white rounded-2xl shadow-xl shadow-slate-200/50 p-8 md:p-10 border border-green-200 text-center">
+        <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-8 h-8 text-green-600">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+          </svg>
+        </div>
+        <h3 class="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
+        <p class="text-slate-600">Your request has been submitted successfully. We'll get back to you within 24 hours.</p>
+        <button type="button" id="submit-another" class="mt-6 text-blue-600 font-medium hover:underline">Submit another request</button>
+      </div>
     </div>
   </section>
+
+  <script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const successMessage = document.getElementById('success-message');
+    const submitAnother = document.getElementById('submit-another');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = `<svg class="animate-spin h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Submitting...`;
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData
+        });
+
+        if (response.ok) {
+          form.classList.add('hidden');
+          successMessage?.classList.remove('hidden');
+          form.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        alert('Something went wrong. Please try again.');
+      } finally {
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+
+    submitAnother?.addEventListener('click', () => {
+      successMessage?.classList.add('hidden');
+      form?.classList.remove('hidden');
+    });
+  </script>
 
   <!-- Footer -->
   <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
