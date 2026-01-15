@@ -1,0 +1,16 @@
+{
+  "name": "WPNurture",
+  "short_name": "WPNurture",
+  "description": "Professional Website Maintenance & SEO Services",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

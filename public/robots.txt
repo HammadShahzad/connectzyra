@@ -1,0 +1,14 @@
+# robots.txt for WPNurture
+# https://wpnurture.com
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://wpnurture.com/sitemap.xml
+
+# Crawl-delay (optional, for politeness)
+Crawl-delay: 1
+
+# Disallow admin/system paths (if any)
+Disallow: /api/
