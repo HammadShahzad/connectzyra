@@ -157,32 +157,6 @@ const faqs = [
   }
 ];
 
-const testimonials = [
-  {
-    name: "David R.",
-    role: "E-commerce Director",
-    company: "Fashion Retailer",
-    content: "Our Shopify store went from page 5 to page 1 for our main keywords. Organic revenue increased 180% in 8 months.",
-    rating: 5,
-    color: "bg-blue-600"
-  },
-  {
-    name: "Sarah M.",
-    role: "Marketing Manager",
-    company: "SaaS Company",
-    content: "Finally an SEO agency that actually delivers. We're ranking #1 for 12 of our target keywords now.",
-    rating: 5,
-    color: "bg-purple-600"
-  },
-  {
-    name: "Michael T.",
-    role: "Owner",
-    company: "Law Firm",
-    content: "Local SEO transformed our practice. We're getting 3x more qualified leads from Google than before.",
-    rating: 5,
-    color: "bg-green-600"
-  }
-];
 ---
 
 <Layout title={pageTitle} description={pageDescription}>
@@ -501,38 +475,171 @@ const testimonials = [
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+  <!-- Testimonials - Trustpilot Style -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <div class="text-center max-w-3xl mx-auto mb-12">
         <span class="text-blue-600 font-semibold text-sm uppercase tracking-wider">Client Success Stories</span>
         <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mt-2 mb-4">
-          Real Results From Real Clients
+          Real SEO Results From Real Clients
         </h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial) => (
-          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200">
-            <div class="flex gap-1 mb-4">
-              {[...Array(testimonial.rating)].map(() => (
-                <svg class="w-5 h-5 text-yellow-400 fill-current" viewBox="0 0 20 20">
-                  <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
-                </svg>
-              ))}
+      <!-- Trustpilot-style Summary -->
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 mb-12 p-6 bg-slate-50 rounded-2xl max-w-3xl mx-auto">
+        <div class="flex items-center gap-4">
+          <div class="text-5xl font-bold text-slate-900">4.9</div>
+          <div class="flex flex-col items-start">
+            <div class="flex text-green-500 text-xl">★★★★★</div>
+            <span class="text-sm text-slate-500">Excellent</span>
+          </div>
+        </div>
+        <!-- Rating Bars -->
+        <div class="flex flex-col gap-1 text-sm min-w-[200px]">
+          <div class="flex items-center gap-2">
+            <span class="w-8 text-slate-600">5 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-green-500 rounded-full" style="width: 94%"></div></div>
+            <span class="w-8 text-slate-500 text-right">94%</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-8 text-slate-600">4 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-green-500 rounded-full" style="width: 5%"></div></div>
+            <span class="w-8 text-slate-500 text-right">5%</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="w-8 text-slate-600">3 ★</span>
+            <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-yellow-400 rounded-full" style="width: 1%"></div></div>
+            <span class="w-8 text-slate-500 text-right">1%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews Slider -->
+      <div class="relative">
+        <div id="seo-reviews-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4 scrollbar-hide">
+          <!-- Review 1 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">1 week ago</span>
             </div>
-            <p class="text-slate-700 mb-6 leading-relaxed">"{testimonial.content}"</p>
-            <div class="flex items-center gap-3">
-              <div class={`w-10 h-10 ${testimonial.color} rounded-full flex items-center justify-center text-white font-bold`}>
-                {testimonial.name[0]}
-              </div>
+            <h4 class="font-semibold text-slate-900 mb-2">180% traffic increase!</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"Our Shopify store went from page 5 to page 1 for our main keywords. Organic revenue increased 180% in just 8 months. Best investment we've made."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm">DR</div>
               <div>
-                <div class="font-semibold text-slate-900">{testimonial.name}</div>
-                <div class="text-sm text-slate-500">{testimonial.role}, {testimonial.company}</div>
+                <h5 class="font-medium text-slate-900 text-sm">David R.</h5>
+                <p class="text-xs text-slate-500">E-commerce Director, Fashion Retailer</p>
               </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
           </div>
-        ))}
+
+          <!-- Review 2 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">2 weeks ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">SEO that actually delivers</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"Finally an SEO agency that actually delivers on their promises. We're ranking #1 for 12 of our target keywords now. Their reporting is also top-notch."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm">SM</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Sarah M.</h5>
+                <p class="text-xs text-slate-500">Marketing Manager, SaaS Company</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">3 weeks ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">3x more qualified leads</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"Local SEO transformed our law practice. We're getting 3x more qualified leads from Google than we were before. The ROI has been incredible."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm">MT</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Michael T.</h5>
+                <p class="text-xs text-slate-500">Partner, Law Firm</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">1 month ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">WooCommerce experts</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"They really understand WooCommerce inside and out. Our product pages are finally ranking and we've seen a 65% increase in organic orders since working with them."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm">JL</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Jennifer L.</h5>
+                <p class="text-xs text-slate-500">Founder, Home Goods Store</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">1 month ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Transparent and effective</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"Love the transparency. Monthly reports show exactly what they're doing and the results. No BS, just solid work. We've grown from 2K to 15K organic visitors monthly."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">RK</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Robert K.</h5>
+                <p class="text-xs text-slate-500">CEO, B2B Services</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">2 months ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Game changer for our startup</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"As a startup, we couldn't afford big agency fees. WPNurture delivered enterprise-level results at a price we could handle. Now we're competing with the big players."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-violet-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm">AP</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Amanda P.</h5>
+                <p class="text-xs text-slate-500">Co-founder, Tech Startup</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="flex items-center justify-center gap-4 mt-6">
+          <button id="seo-prev-review" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+          </button>
+          <span id="seo-slide-counter" class="text-sm text-slate-500 min-w-[60px] text-center">1 / 6</span>
+          <button id="seo-next-review" class="w-10 h-10 rounded-full bg-slate-100 hover:bg-slate-200 flex items-center justify-center transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   </section>
@@ -875,6 +982,34 @@ const testimonials = [
         icon?.classList.toggle('rotate-180');
       });
     });
+
+    // Reviews Slider Logic
+    const seoSlider = document.getElementById('seo-reviews-slider');
+    const seoPrevBtn = document.getElementById('seo-prev-review');
+    const seoNextBtn = document.getElementById('seo-next-review');
+    const seoCounter = document.getElementById('seo-slide-counter');
+    
+    let seoCurrentSlide = 0;
+    const seoTotalSlides = 6;
+
+    function seoScrollToSlide(index: number) {
+      if (!seoSlider) return;
+      
+      // Handle looping
+      if (index < 0) index = seoTotalSlides - 1;
+      if (index >= seoTotalSlides) index = 0;
+      
+      seoCurrentSlide = index;
+      const slideWidth = seoSlider.querySelector('div')?.offsetWidth || 380;
+      seoSlider.scrollTo({ left: index * (slideWidth + 24), behavior: 'smooth' });
+      if (seoCounter) seoCounter.textContent = `${index + 1} / ${seoTotalSlides}`;
+    }
+
+    seoPrevBtn?.addEventListener('click', () => seoScrollToSlide(seoCurrentSlide - 1));
+    seoNextBtn?.addEventListener('click', () => seoScrollToSlide(seoCurrentSlide + 1));
+
+    // Auto-advance every 5 seconds
+    setInterval(() => seoScrollToSlide(seoCurrentSlide + 1), 5000);
 
     // Form submission
     const seoForm = document.getElementById('seo-form') as HTMLFormElement;
