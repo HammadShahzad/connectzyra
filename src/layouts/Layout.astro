@@ -70,24 +70,63 @@ const { title, description = "WPNurture - US-Based WordPress Updates & Maintenan
   <body class="bg-slate-50 text-slate-900 font-sans antialiased">
     
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-lg border-b border-slate-200/80">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
           <a href="/" class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
+            <div class="w-9 h-9 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-5 h-5">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
               </svg>
             </div>
-            <span class="font-bold text-xl text-slate-900">WPNurture</span>
+            <span class="font-bold text-lg text-slate-900">WPNurture</span>
           </a>
-          <div class="hidden md:flex items-center gap-8">
-            <a href="/#features" class="text-slate-600 hover:text-slate-900 transition-colors">Features</a>
-            <a href="/#pricing" class="text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
-            <a href="/seo" class="text-slate-600 hover:text-slate-900 transition-colors">SEO</a>
-            <a href="/blog" class="text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
-            <a href="/#contact" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors">Get Started</a>
+          
+          <div class="hidden md:flex items-center gap-1">
+            <!-- Services Dropdown -->
+            <div class="relative group">
+              <button class="flex items-center gap-1 text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg hover:bg-slate-100 transition-all text-sm font-medium">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 group-hover:rotate-180 transition-transform">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </button>
+              <div class="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div class="bg-white rounded-xl shadow-xl border border-slate-200 py-2 min-w-[220px]">
+                  <a href="/" class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors">
+                    <div class="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-blue-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="text-sm font-medium text-slate-900">WP Maintenance</div>
+                      <div class="text-xs text-slate-500">Updates, backups & security</div>
+                    </div>
+                  </a>
+                  <a href="/seo" class="flex items-center gap-3 px-4 py-2.5 hover:bg-slate-50 transition-colors">
+                    <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-green-600">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="text-sm font-medium text-slate-900">SEO Services</div>
+                      <div class="text-xs text-slate-500">Rank higher on Google</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <a href="/#pricing" class="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg hover:bg-slate-100 transition-all text-sm font-medium">Pricing</a>
+            <a href="/blog" class="text-slate-600 hover:text-slate-900 px-4 py-2 rounded-lg hover:bg-slate-100 transition-all text-sm font-medium">Blog</a>
+            
+            <div class="w-px h-6 bg-slate-200 mx-2"></div>
+            
+            <a href="/#contact" class="bg-blue-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors text-sm shadow-sm">Get Started</a>
           </div>
+          
           <!-- Mobile menu button -->
           <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
@@ -95,14 +134,28 @@ const { title, description = "WPNurture - US-Based WordPress Updates & Maintenan
             </svg>
           </button>
         </div>
+        
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden py-4 border-t border-slate-200">
-          <div class="flex flex-col gap-4">
-            <a href="/#features" class="text-slate-600 hover:text-slate-900 transition-colors">Features</a>
-            <a href="/#pricing" class="text-slate-600 hover:text-slate-900 transition-colors">Pricing</a>
-            <a href="/seo" class="text-slate-600 hover:text-slate-900 transition-colors">SEO Services</a>
-            <a href="/blog" class="text-slate-600 hover:text-slate-900 transition-colors">Blog</a>
-            <a href="/#contact" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center">Get Started</a>
+          <div class="flex flex-col gap-1">
+            <p class="text-xs font-semibold text-slate-400 uppercase tracking-wider px-3 py-2">Services</p>
+            <a href="/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-blue-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+              </svg>
+              WP Maintenance
+            </a>
+            <a href="/seo" class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-green-600">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z" />
+              </svg>
+              SEO Services
+            </a>
+            <div class="h-px bg-slate-200 my-2"></div>
+            <a href="/#pricing" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">Pricing</a>
+            <a href="/blog" class="px-3 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-colors">Blog</a>
+            <div class="h-px bg-slate-200 my-2"></div>
+            <a href="/#contact" class="bg-blue-600 text-white px-4 py-2.5 rounded-lg font-medium hover:bg-blue-700 transition-colors text-center">Get Started</a>
           </div>
         </div>
       </div>
@@ -116,9 +169,9 @@ const { title, description = "WPNurture - US-Based WordPress Updates & Maintenan
     <footer class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
       <div class="max-w-7xl mx-auto">
         <!-- Main Footer Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
-          <!-- Brand Column -->
-          <div class="col-span-2 md:col-span-1">
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 mb-12">
+          <!-- Brand Column - Wider -->
+          <div class="col-span-2">
             <a href="/" class="flex items-center gap-2 mb-4">
               <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
@@ -127,50 +180,55 @@ const { title, description = "WPNurture - US-Based WordPress Updates & Maintenan
               </div>
               <span class="font-bold text-xl">WPNurture</span>
             </a>
-            <p class="text-slate-400 text-sm mb-4">Professional WordPress maintenance, updates & backups. US-based support team.</p>
-            <div class="flex items-center gap-2 text-sm text-slate-400">
+            <p class="text-slate-400 text-sm mb-5 max-w-xs">Professional WordPress maintenance & SEO services. US-based team dedicated to your website's success.</p>
+            <div class="flex items-center gap-2 text-sm text-slate-400 mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
               </svg>
               <span>Wilmington, DE, USA</span>
             </div>
+            <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition-colors">
+              Get Started
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+              </svg>
+            </a>
           </div>
 
-          <!-- Services Column -->
+          <!-- WP Maintenance Column -->
           <div>
-            <h4 class="font-semibold text-white mb-4">Services</h4>
-            <ul class="space-y-2 text-sm text-slate-400">
-              <li><a href="/#features" class="hover:text-white transition-colors">WP Maintenance</a></li>
+            <h4 class="font-semibold text-white mb-4 text-sm">WP Maintenance</h4>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li><a href="/#features" class="hover:text-white transition-colors">Core Updates</a></li>
+              <li><a href="/#features" class="hover:text-white transition-colors">Plugin Updates</a></li>
               <li><a href="/#features" class="hover:text-white transition-colors">Daily Backups</a></li>
               <li><a href="/#features" class="hover:text-white transition-colors">Security Monitoring</a></li>
-              <li><a href="/seo" class="hover:text-white transition-colors">SEO Services</a></li>
-              <li><a href="/seo#packages" class="hover:text-white transition-colors">E-commerce SEO</a></li>
+              <li><a href="/#features" class="hover:text-white transition-colors">Uptime Monitoring</a></li>
+            </ul>
+          </div>
+
+          <!-- SEO Services Column -->
+          <div>
+            <h4 class="font-semibold text-white mb-4 text-sm">SEO Services</h4>
+            <ul class="space-y-2.5 text-sm text-slate-400">
+              <li><a href="/seo" class="hover:text-white transition-colors">Business SEO</a></li>
+              <li><a href="/seo#packages" class="hover:text-white transition-colors">WooCommerce SEO</a></li>
+              <li><a href="/seo#packages" class="hover:text-white transition-colors">Shopify SEO</a></li>
+              <li><a href="/seo" class="hover:text-white transition-colors">Link Building</a></li>
+              <li><a href="/seo" class="hover:text-white transition-colors">Keyword Research</a></li>
             </ul>
           </div>
 
           <!-- Company Column -->
           <div>
-            <h4 class="font-semibold text-white mb-4">Company</h4>
-            <ul class="space-y-2 text-sm text-slate-400">
+            <h4 class="font-semibold text-white mb-4 text-sm">Company</h4>
+            <ul class="space-y-2.5 text-sm text-slate-400">
               <li><a href="/#pricing" class="hover:text-white transition-colors">Pricing</a></li>
               <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
               <li><a href="/#contact" class="hover:text-white transition-colors">Contact</a></li>
-            </ul>
-          </div>
-
-          <!-- Contact Column -->
-          <div>
-            <h4 class="font-semibold text-white mb-4">Get In Touch</h4>
-            <ul class="space-y-3 text-sm text-slate-400">
-              <li>
-                <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors mt-2">
-                  Get Started
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                  </svg>
-                </a>
-              </li>
+              <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
             </ul>
           </div>
         </div>
@@ -178,13 +236,9 @@ const { title, description = "WPNurture - US-Based WordPress Updates & Maintenan
         <!-- Bottom Bar -->
         <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
           <p>&copy; {new Date().getFullYear()} WPNurture LLC. All rights reserved.</p>
-          <div class="flex items-center gap-6">
-            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
-            <span class="flex items-center gap-1">
-              Made with <span class="text-red-500">♥</span> in USA
-            </span>
-          </div>
+          <span class="flex items-center gap-1">
+            Made with <span class="text-red-500">♥</span> in USA
+          </span>
         </div>
       </div>
     </footer>
