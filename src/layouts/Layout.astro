@@ -66,30 +66,83 @@ const { title, description = "WPNurture - US-Based WordPress Updates & Maintenan
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
+    <footer class="py-16 px-4 sm:px-6 lg:px-8 bg-slate-900 text-white">
       <div class="max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-          <a href="/" class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+        <!-- Main Footer Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+          <!-- Brand Column -->
+          <div class="col-span-2 md:col-span-1">
+            <a href="/" class="flex items-center gap-2 mb-4">
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+                </svg>
+              </div>
+              <span class="font-bold text-xl">WPNurture</span>
+            </a>
+            <p class="text-slate-400 text-sm mb-4">Professional WordPress maintenance, updates & backups. US-based support team.</p>
+            <div class="flex items-center gap-2 text-sm text-slate-400">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
               </svg>
+              <span>Wilmington, DE, USA</span>
             </div>
-            <span class="font-bold text-xl">WPNurture</span>
-          </a>
-          <div class="flex items-center gap-6 text-slate-400">
-            <a href="/#features" class="hover:text-white transition-colors">Features</a>
-            <a href="/#pricing" class="hover:text-white transition-colors">Pricing</a>
-            <a href="/blog" class="hover:text-white transition-colors">Blog</a>
-            <a href="/#contact" class="hover:text-white transition-colors">Contact</a>
+          </div>
+
+          <!-- Services Column -->
+          <div>
+            <h4 class="font-semibold text-white mb-4">Services</h4>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li><a href="/#features" class="hover:text-white transition-colors">Core Updates</a></li>
+              <li><a href="/#features" class="hover:text-white transition-colors">Plugin Updates</a></li>
+              <li><a href="/#features" class="hover:text-white transition-colors">Daily Backups</a></li>
+              <li><a href="/#features" class="hover:text-white transition-colors">Security Monitoring</a></li>
+              <li><a href="/#features" class="hover:text-white transition-colors">Uptime Monitoring</a></li>
+            </ul>
+          </div>
+
+          <!-- Company Column -->
+          <div>
+            <h4 class="font-semibold text-white mb-4">Company</h4>
+            <ul class="space-y-2 text-sm text-slate-400">
+              <li><a href="/#pricing" class="hover:text-white transition-colors">Pricing</a></li>
+              <li><a href="/blog" class="hover:text-white transition-colors">Blog</a></li>
+              <li><a href="/#contact" class="hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Column -->
+          <div>
+            <h4 class="font-semibold text-white mb-4">Get In Touch</h4>
+            <ul class="space-y-3 text-sm text-slate-400">
+              <li class="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                </svg>
+                <a href="mailto:hello@wpnurture.com" class="hover:text-white transition-colors">hello@wpnurture.com</a>
+              </li>
+              <li>
+                <a href="/#contact" class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors mt-2">
+                  Get Started
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="border-t border-slate-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
-          <p>&copy; {new Date().getFullYear()} WPNurture. All rights reserved.</p>
-          <div class="flex items-center gap-4">
-            <span>Made with <span class="text-red-500">♥</span> in USA</span>
-            <span>&bull;</span>
-            <span>1209 Orange St, Wilmington, DE 19801</span>
+
+        <!-- Bottom Bar -->
+        <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-500 text-sm">
+          <p>&copy; {new Date().getFullYear()} WPNurture LLC. All rights reserved.</p>
+          <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+            <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+            <span class="flex items-center gap-1">
+              Made with <span class="text-red-500">♥</span> in USA
+            </span>
           </div>
         </div>
       </div>
