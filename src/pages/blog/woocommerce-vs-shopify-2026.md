@@ -4,7 +4,8 @@ title: "WooCommerce vs Shopify in 2026: Which Platform Is Right for Your Store?"
 description: "An honest comparison of WooCommerce and Shopify for e-commerce. We break down pricing, features, SEO, scalability, and more to help you choose the right platform."
 pubDate: "2026-01-08"
 author: "WPNurture Team"
-image: "/blog/woo-vs-shopify.jpg"
+image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=2070"
+category: "E-commerce"
 tags: ["WooCommerce", "Shopify", "E-commerce"]
 ---
 

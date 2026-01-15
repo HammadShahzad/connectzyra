@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogPost.astro'
 title: "The Rising Threat of AI-Powered WordPress Attacks in 2026"
-pubDate: 2026-01-10
+pubDate: "2026-01-10"
 description: "Cybercriminals are using AI to launch smarter, faster attacks on WordPress sites. Here's how to protect your business."
 author: "WPNurture Team"
 image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=2070"

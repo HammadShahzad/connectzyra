@@ -4,7 +4,8 @@ title: "Shopify SEO: The Complete Guide to Ranking Your Store in 2026"
 description: "Learn how to optimize your Shopify store for Google search. From technical SEO to product optimization, this guide covers everything you need to rank higher and sell more."
 pubDate: "2026-01-10"
 author: "WPNurture Team"
-image: "/blog/shopify-seo.jpg"
+image: "https://images.unsplash.com/photo-1556740734-792a1a790f8b?auto=format&fit=crop&q=80&w=2070"
+category: "SEO"
 tags: ["SEO", "Shopify", "E-commerce"]
 ---
 

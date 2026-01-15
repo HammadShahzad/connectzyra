@@ -4,7 +4,8 @@ title: "The Ultimate WordPress Maintenance Checklist for 2026"
 description: "Keep your WordPress site secure, fast, and running smoothly with this comprehensive maintenance checklist. Daily, weekly, and monthly tasks every site owner needs."
 pubDate: "2026-01-12"
 author: "WPNurture Team"
-image: "/blog/wp-maintenance.jpg"
+image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070"
+category: "Maintenance"
 tags: ["WordPress", "Maintenance", "Security"]
 ---
 

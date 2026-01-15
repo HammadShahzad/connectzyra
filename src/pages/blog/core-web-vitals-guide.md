@@ -1,7 +1,7 @@
 ---
 layout: '../../layouts/BlogPost.astro'
 title: "Core Web Vitals & WordPress: Why Speed is Your New SEO Superpower"
-pubDate: 2026-01-05
+pubDate: "2026-01-05"
 description: "Google's page experience signals are more important than ever. Learn how to optimize your WordPress site for Core Web Vitals."
 author: "WPNurture Team"
 image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=2015"
