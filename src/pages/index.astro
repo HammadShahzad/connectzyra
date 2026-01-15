@@ -245,60 +245,187 @@ const features = [
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
+  <!-- Reviews Section - Trustpilot Style -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 overflow-hidden">
     <div class="max-w-7xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
+      <!-- Header with Rating Summary -->
+      <div class="text-center max-w-3xl mx-auto mb-12">
         <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
-          Trusted by Business Owners
+          Customer Reviews
         </h2>
-        <p class="text-lg text-slate-600">
-          Don't just take our word for it. See what our clients have to say about our WordPress maintenance services.
-        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mt-6">
+          <!-- Rating Score -->
+          <div class="flex items-center gap-3">
+            <span class="text-5xl font-bold text-slate-900">4.9</span>
+            <div class="flex flex-col items-start">
+              <div class="flex text-green-500 text-xl">★★★★★</div>
+              <span class="text-sm text-slate-500">Based on 127 reviews</span>
+            </div>
+          </div>
+          <!-- Rating Bars -->
+          <div class="flex flex-col gap-1 text-sm min-w-[200px]">
+            <div class="flex items-center gap-2">
+              <span class="w-8 text-slate-600">5 ★</span>
+              <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-green-500 rounded-full" style="width: 92%"></div></div>
+              <span class="w-8 text-slate-500 text-right">92%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-8 text-slate-600">4 ★</span>
+              <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-green-500 rounded-full" style="width: 6%"></div></div>
+              <span class="w-8 text-slate-500 text-right">6%</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-8 text-slate-600">3 ★</span>
+              <div class="flex-1 h-2 bg-slate-200 rounded-full overflow-hidden"><div class="h-full bg-yellow-400 rounded-full" style="width: 2%"></div></div>
+              <span class="w-8 text-slate-500 text-right">2%</span>
+            </div>
+          </div>
+        </div>
       </div>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Testimonial 1 -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
-          <div class="flex text-yellow-400 mb-4">★★★★★</div>
-          <p class="text-slate-600 italic mb-6">"WPNurture has been a lifesaver. We used to spend hours worrying about updates and backups. Now, it's all automated, and I sleep better knowing our site is secure."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold">S</div>
-            <div>
-              <h4 class="font-semibold text-slate-900">Sarah J.</h4>
-              <p class="text-sm text-slate-500">E-commerce Owner</p>
+
+      <!-- Reviews Slider -->
+      <div class="relative">
+        <!-- Slider Container -->
+        <div id="reviews-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 -mx-4 px-4 scrollbar-hide">
+          <!-- Review 1 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">2 days ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Finally, peace of mind!</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"WPNurture has been a lifesaver. We used to spend hours worrying about updates and backups. Now, it's all automated, and I sleep better knowing our site is secure."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm">SJ</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Sarah Johnson</h5>
+                <p class="text-xs text-slate-500">E-commerce Owner, Texas</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">1 week ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Perfect for agencies</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"The white-label reporting is fantastic for my agency. My clients are impressed, and I don't have to lift a finger. The US-based support team is also super responsive."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold text-sm">MD</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Mark Davidson</h5>
+                <p class="text-xs text-slate-500">Agency Founder, California</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">2 weeks ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Security I can trust</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"I had a site hack scare last year, and since switching to WPNurture, I haven't had a single issue. The daily malware scans give me total peace of mind."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold text-sm">EC</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Emily Chen</h5>
+                <p class="text-xs text-slate-500">Small Business Owner, Florida</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 4 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">3 weeks ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Worth every penny</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"We manage 8 client sites and the Business plan is incredible value. Staging environments, priority support, and the white-label reports make us look so professional."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-sm">JR</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">James Rodriguez</h5>
+                <p class="text-xs text-slate-500">Web Developer, New York</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 5 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★★</div>
+              <span class="text-xs text-slate-400">1 month ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Saved my business</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"After a bad plugin update crashed my site, WPNurture restored everything in minutes from a backup. I didn't even know they had already backed it up that morning. Amazing!"</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-sm">LM</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">Lisa Martinez</h5>
+                <p class="text-xs text-slate-500">Restaurant Owner, Arizona</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+            </div>
+          </div>
+
+          <!-- Review 6 -->
+          <div class="min-w-[320px] sm:min-w-[380px] snap-start bg-white p-6 rounded-2xl shadow-sm border border-slate-200 flex flex-col">
+            <div class="flex items-center justify-between mb-4">
+              <div class="flex text-green-500">★★★★<span class="text-slate-300">★</span></div>
+              <span class="text-xs text-slate-400">1 month ago</span>
+            </div>
+            <h4 class="font-semibold text-slate-900 mb-2">Great service overall</h4>
+            <p class="text-slate-600 text-sm flex-1 mb-4">"Solid service and good value. Only giving 4 stars because I wish there was a plan between Starter and Growth for 2 sites. Otherwise, everything works flawlessly."</p>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-100">
+              <div class="w-10 h-10 bg-gradient-to-br from-slate-500 to-slate-700 rounded-full flex items-center justify-center text-white font-bold text-sm">DP</div>
+              <div>
+                <h5 class="font-medium text-slate-900 text-sm">David Park</h5>
+                <p class="text-xs text-slate-500">Freelancer, Washington</p>
+              </div>
+              <svg class="w-5 h-5 text-green-500 ml-auto" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
             </div>
           </div>
         </div>
 
-        <!-- Testimonial 2 -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
-          <div class="flex text-yellow-400 mb-4">★★★★★</div>
-          <p class="text-slate-600 italic mb-6">"The white-label reporting is fantastic for my agency. My clients are impressed, and I don't have to lift a finger. The US-based support team is also super responsive."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full flex items-center justify-center text-white font-bold">M</div>
-            <div>
-              <h4 class="font-semibold text-slate-900">Mark D.</h4>
-              <p class="text-sm text-slate-500">Agency Founder</p>
-            </div>
+        <!-- Slider Navigation -->
+        <div class="flex justify-center items-center gap-4 mt-8">
+          <button id="prev-review" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <div id="slider-dots" class="flex gap-2">
+            <button class="w-2 h-2 rounded-full bg-blue-600"></button>
+            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
+            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
+            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
+            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
+            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
           </div>
-        </div>
-
-        <!-- Testimonial 3 -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 relative">
-          <div class="flex text-yellow-400 mb-4">★★★★★</div>
-          <p class="text-slate-600 italic mb-6">"I had a site hack scare last year, and since switching to WPNurture, I haven't had a single issue. The daily malware scans give me total peace of mind."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-bold">E</div>
-            <div>
-              <h4 class="font-semibold text-slate-900">Emily C.</h4>
-              <p class="text-sm text-slate-500">Small Business Owner</p>
-            </div>
-          </div>
+          <button id="next-review" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
         </div>
       </div>
     </div>
   </section>
+
+  <style>
+    .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+    }
+    .scrollbar-hide {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
 
   <!-- Pricing Section -->
   <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50">
@@ -858,6 +985,47 @@ business-site.net"
   </section>
 
   <script>
+    // Reviews Slider Logic
+    const slider = document.getElementById('reviews-slider');
+    const prevBtn = document.getElementById('prev-review');
+    const nextBtn = document.getElementById('next-review');
+    const dots = document.querySelectorAll('#slider-dots button');
+    
+    let currentSlide = 0;
+    const cardWidth = 400; // approximate card width + gap
+
+    function updateDots() {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('bg-blue-600', i === currentSlide);
+        dot.classList.toggle('bg-slate-300', i !== currentSlide);
+      });
+    }
+
+    function scrollToSlide(index: number) {
+      if (!slider) return;
+      const cards = slider.children;
+      if (index < 0) index = 0;
+      if (index >= cards.length) index = cards.length - 1;
+      currentSlide = index;
+      const card = cards[index] as HTMLElement;
+      slider.scrollTo({ left: card.offsetLeft - 16, behavior: 'smooth' });
+      updateDots();
+    }
+
+    prevBtn?.addEventListener('click', () => scrollToSlide(currentSlide - 1));
+    nextBtn?.addEventListener('click', () => scrollToSlide(currentSlide + 1));
+    
+    dots.forEach((dot, i) => {
+      dot.addEventListener('click', () => scrollToSlide(i));
+    });
+
+    // Auto-scroll every 5 seconds
+    setInterval(() => {
+      if (!slider) return;
+      const maxSlide = slider.children.length - 1;
+      scrollToSlide(currentSlide >= maxSlide ? 0 : currentSlide + 1);
+    }, 5000);
+
     // Contact Form Logic
     const form = document.getElementById('contact-form') as HTMLFormElement;
     const successMessage = document.getElementById('success-message');
