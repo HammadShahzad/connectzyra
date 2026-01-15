@@ -259,7 +259,7 @@ const features = [
             <span class="text-5xl font-bold text-slate-900">4.9</span>
             <div class="flex flex-col items-start">
               <div class="flex text-green-500 text-xl">★★★★★</div>
-              <span class="text-sm text-slate-500">Based on 127 reviews</span>
+              <span class="text-sm text-slate-500">Excellent</span>
             </div>
           </div>
           <!-- Rating Bars -->
@@ -398,18 +398,11 @@ const features = [
 
         <!-- Slider Navigation -->
         <div class="flex justify-center items-center gap-4 mt-8">
-          <button id="prev-review" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-all">
+          <button id="prev-review" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all shadow-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
           </button>
-          <div id="slider-dots" class="flex gap-2">
-            <button class="w-2 h-2 rounded-full bg-blue-600"></button>
-            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
-            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
-            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
-            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
-            <button class="w-2 h-2 rounded-full bg-slate-300"></button>
-          </div>
-          <button id="next-review" class="w-10 h-10 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:border-slate-300 transition-all">
+          <span id="slide-counter" class="text-sm text-slate-500 min-w-[60px] text-center">1 / 6</span>
+          <button id="next-review" class="w-12 h-12 rounded-full bg-white border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all shadow-sm">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
           </button>
         </div>
@@ -989,41 +982,34 @@ business-site.net"
     const slider = document.getElementById('reviews-slider');
     const prevBtn = document.getElementById('prev-review');
     const nextBtn = document.getElementById('next-review');
-    const dots = document.querySelectorAll('#slider-dots button');
+    const counter = document.getElementById('slide-counter');
     
     let currentSlide = 0;
-    const cardWidth = 400; // approximate card width + gap
+    const totalSlides = slider ? slider.children.length : 0;
 
-    function updateDots() {
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('bg-blue-600', i === currentSlide);
-        dot.classList.toggle('bg-slate-300', i !== currentSlide);
-      });
+    function updateCounter() {
+      if (counter) {
+        counter.textContent = `${currentSlide + 1} / ${totalSlides}`;
+      }
     }
 
     function scrollToSlide(index: number) {
       if (!slider) return;
       const cards = slider.children;
-      if (index < 0) index = 0;
-      if (index >= cards.length) index = cards.length - 1;
+      if (index < 0) index = totalSlides - 1; // Loop to end
+      if (index >= totalSlides) index = 0; // Loop to start
       currentSlide = index;
       const card = cards[index] as HTMLElement;
       slider.scrollTo({ left: card.offsetLeft - 16, behavior: 'smooth' });
-      updateDots();
+      updateCounter();
     }
 
     prevBtn?.addEventListener('click', () => scrollToSlide(currentSlide - 1));
     nextBtn?.addEventListener('click', () => scrollToSlide(currentSlide + 1));
-    
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => scrollToSlide(i));
-    });
 
     // Auto-scroll every 5 seconds
     setInterval(() => {
-      if (!slider) return;
-      const maxSlide = slider.children.length - 1;
-      scrollToSlide(currentSlide >= maxSlide ? 0 : currentSlide + 1);
+      scrollToSlide(currentSlide + 1);
     }, 5000);
 
     // Contact Form Logic
