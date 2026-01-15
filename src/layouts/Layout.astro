@@ -15,11 +15,57 @@ const { title, description = "WPNurture - US-Based WordPress Updates & Maintenan
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wpnurture.com/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://wpnurture.com/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wpnurture.com/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://wpnurture.com/og-image.jpg" />
+
+    <link rel="canonical" href="https://wpnurture.com/" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <title>{title}</title>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "WPNurture",
+        "image": "https://wpnurture.com/logo.png",
+        "description": "Professional WordPress maintenance, daily updates, backups, and security monitoring services.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1209 Orange St",
+          "addressLocality": "Wilmington",
+          "addressRegion": "DE",
+          "postalCode": "19801",
+          "addressCountry": "US"
+        },
+        "priceRange": "$$",
+        "telephone": "+1-555-012-3456",
+        "url": "https://wpnurture.com",
+        "areaServed": "US",
+        "sameAs": [
+          "https://twitter.com/wpnurture",
+          "https://facebook.com/wpnurture",
+          "https://linkedin.com/company/wpnurture"
+        ]
+      }
+    </script>
   </head>
   <body class="bg-slate-50 text-slate-900 font-sans antialiased">
     
